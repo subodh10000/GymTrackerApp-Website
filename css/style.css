@@ -746,6 +746,10 @@ body {
     margin: 0.25rem 0;
 }
 
+.footer .logo-image {
+    filter: brightness(0) invert(1);
+}
+
 /* ===================================
    Privacy Page Styles
    =================================== */
