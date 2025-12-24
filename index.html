@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GymTrackerApp - Your personal fitness companion for tracking workouts, setting goals, and crushing challenges">
+    <title>GymTrackerApp - Track Your Fitness Journey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">
+                    <span class="logo-icon">💪</span>
+                    <span class="logo-text">GymTracker</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#screenshots">Gallery</a>
+                    <a href="#challenges">Challenges</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="#download" class="btn-download">Download</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Ready to <span class="gradient-text">crush it?</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Your personal fitness companion that helps you track workouts,
+                        smash personal records, and achieve your fitness goals with
+                        intelligent workout plans.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download App
+                        </a>
+                        <a href="#features" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Active Users</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100K+</div>
+                            <div class="stat-label">Workouts Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.9</div>
+                            <div class="stat-label">App Store Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="images/hero-screen.png" alt="GymTrackerApp Home Screen" class="screen-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <div class="card-icon">🔥</div>
+                        <div class="card-content">
+                            <div class="card-title">Bench Press</div>
+                            <div class="card-value">225 lbs</div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">⚡</div>
+                        <div class="card-content">
+                            <div class="card-title">Deadlift PR</div>
+                            <div class="card-value">405 lbs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything you need to <span class="gradient-text">succeed</span></h2>
+                <p class="section-subtitle">Powerful features designed to help you reach your fitness goals</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Personalized Plans</h3>
+                    <p class="feature-description">Get AI-powered workout plans tailored to your goals, fitness level, and preferences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Track Progress</h3>
+                    <p class="feature-description">Monitor your personal records and see your strength gains over time with detailed analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Weekly Programs</h3>
+                    <p class="feature-description">Structured weekly routines with upper body, lower body, and recovery days for optimal results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20V10"></path>
+                            <path d="M18 20V4"></path>
+                            <path d="M6 20v-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Exercise Library</h3>
+                    <p class="feature-description">Access hundreds of exercises with detailed instructions, proper form guides, and variations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Reminders</h3>
+                    <p class="feature-description">Never miss a workout with customizable reminders and hydration notifications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">30-Day Challenges</h3>
+                    <p class="feature-description">Join progressive challenges to build strength, core stability, and healthy habits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See it in <span class="gradient-text">action</span></h2>
+                <p class="section-subtitle">Beautifully designed interface that makes tracking workouts a joy</p>
+            </div>
+            <div class="screenshots-carousel">
+                <div class="carousel-track">
+                    <div class="screenshot-item">
+                        <img src="images/screenshot-1.png" alt="Home Screen" class="screenshot-img">
+                        <p class="screenshot-caption">Track Your Records</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot-2.png" alt="Weekly Workouts" class="screenshot-img">
+                        <p class="screenshot-caption">Weekly Programs</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot-3.png" alt="Exercise Details" class="screenshot-img">
+                        <p class="screenshot-caption">Exercise Details</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot-4.png" alt="Customize Workout" class="screenshot-img">
+                        <p class="screenshot-caption">Customize Your Plan</p>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot-5.png" alt="Challenges" class="screenshot-img">
+                        <p class="screenshot-caption">30-Day Challenges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="challenges-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Push your <span class="gradient-text">limits</span></h2>
+                <p class="section-subtitle">Join our progressive 30-day challenges and transform your fitness</p>
+            </div>
+            <div class="challenges-grid">
+                <div class="challenge-card challenge-abs">
+                    <div class="challenge-header">
+                        <span class="challenge-tag">STRONGER CORE & DEFINITION</span>
+                        <h3 class="challenge-name">30-Day Abs Challenge</h3>
+                        <p class="challenge-desc">An intense, progressive plan for a stronger core</p>
+                    </div>
+                    <div class="challenge-icon">🏃</div>
+                </div>
+                <div class="challenge-card challenge-pushups">
+                    <div class="challenge-header">
+                        <span class="challenge-tag">UPPER BODY POWER</span>
+                        <h3 class="challenge-name">30-Day Pushups Challenge</h3>
+                        <p class="challenge-desc">Build upper body strength and endurance</p>
+                    </div>
+                    <div class="challenge-icon">💪</div>
+                </div>
+                <div class="challenge-card challenge-face">
+                    <div class="challenge-header">
+                        <span class="challenge-tag">TONE FACIAL MUSCLES</span>
+                        <h3 class="challenge-name">30-Day Face Exercises</h3>
+                        <p class="challenge-desc">Debloat face fat and tone facial muscles</p>
+                    </div>
+                    <div class="challenge-icon">😊</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text">
+                    <h2 class="download-title">Start your fitness journey <span class="gradient-text">today</span></h2>
+                    <p class="download-subtitle">Download GymTrackerApp and get personalized workout plans, track your progress, and achieve your goals.</p>
+                    <div class="download-buttons">
+                        <a href="#" class="store-button apple">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                            </svg>
+                            <div>
+                                <div class="store-label">Download on the</div>
+                                <div class="store-name">App Store</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="privacy-notice">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>Your data stays on your device. <a href="privacy.html">Read our Privacy Policy</a></span>
+                    </div>
+                </div>
+                <div class="download-image">
+                    <div class="phone-mockup-large">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="images/download-screen.png" alt="GymTrackerApp" class="screen-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">💪</span>
+                        <span class="logo-text">GymTracker</span>
+                    </div>
+                    <p class="footer-description">Your personal fitness companion for achieving greatness.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#screenshots">Screenshots</a>
+                        <a href="#challenges">Challenges</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:kathayatsubodh@gmail.com">Support</a>
+                        <a href="mailto:kathayatsubodh@gmail.com">Feedback</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymTrackerApp. All rights reserved.</p>
+                <p>Made with ❤️ by Subodh Kathayat</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
