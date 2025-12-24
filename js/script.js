@@ -218,55 +218,6 @@ window.addEventListener('load', () => {
 });
 
 // ===================================
-// Stats Counter Animation
-// ===================================
-function animateCounter(element, target, duration = 2000) {
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = formatNumber(target);
-            clearInterval(timer);
-        } else {
-            element.textContent = formatNumber(Math.floor(current));
-        }
-    }, 16);
-}
-
-function formatNumber(num) {
-    if (num >= 1000) {
-        return (num / 1000).toFixed(1).replace('.0', '') + 'K';
-    }
-    return num.toString();
-}
-
-// Trigger counter animation when stats come into view
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
-            statNumbers.forEach((stat, index) => {
-                const targets = [50000, 100000, 4.9];
-                const originalText = stat.textContent;
-
-                if (index < 2) {
-                    animateCounter(stat, targets[index]);
-                }
-            });
-            statsObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) {
-    statsObserver.observe(heroStats);
-}
-
-// ===================================
 // Challenge Cards Hover Effect
 // ===================================
 const challengeCards = document.querySelectorAll('.challenge-card');
@@ -311,8 +262,54 @@ window.addEventListener('mousemove', (e) => {
 });
 
 // ===================================
+// Contact Form Handler
+// ===================================
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        // Create mailto link
+        const mailtoLink = `mailto:kathayatsubodh@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+            `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+        )}`;
+
+        // Open default email client
+        window.location.href = mailtoLink;
+
+        // Show success message
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const originalHTML = submitBtn.innerHTML;
+
+        submitBtn.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Message Sent!
+        `;
+        submitBtn.style.background = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
+
+        // Reset form
+        setTimeout(() => {
+            contactForm.reset();
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.style.background = '';
+        }, 3000);
+    });
+}
+
+// ===================================
 // Console Easter Egg
 // ===================================
 console.log('%c🏋️ GymTrackerApp', 'font-size: 24px; font-weight: bold; color: #667eea;');
 console.log('%cReady to crush it? Download the app and start your fitness journey!', 'font-size: 14px; color: #718096;');
-console.log('%cMade with ❤️ by Subodh Kathayat', 'font-size: 12px; color: #a0aec0;');
+console.log('%cContact: kathayatsubodh@gmail.com', 'font-size: 12px; color: #a0aec0;');
